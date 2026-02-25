@@ -1,35 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
 <meta charset="UTF-8">
-<title>Dzień Kobiet</title>
+<title>Dzień Kobiet 💖</title>
+
+<!-- Fancy czcionka -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
 <style>
 body {
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background: #ffeef5;
-    font-family: Arial, sans-serif;
+    font-family: 'Playfair Display', serif;
     text-align: center;
 }
+
 .box {
     background: white;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    font-size: 22px;
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    font-size: 28px;
+    max-width: 350px;
+    line-height: 1.4;
 }
 </style>
 </head>
+
 <body>
 
-<div class="box" id="message"></div>
+<div class="box" id="message">Ładowanie...</div>
 
-<script>const messages = [
-"Jesteś piękna!",
-"Diva is here🫵🏼",
-"Slayyy diva💅🏼💅🏼",
+<script>
+const messages = [
+"Jesteś piękna 💖",
+"Diva is here 🫵🏼",
+"Slayyy diva 💅🏼",
 "Masz śliczny uśmiech 😍",
 "Masz prawo czuć się gorzej.",
 "Twoja wrażliwość to siła.",
@@ -37,12 +47,17 @@ body {
 "Jesteś wystarczająca.",
 "Świecisz bardziej niż myślisz ✨",
 "Nie musisz być idealna.",
-"Bez make up jesteś śliczna!!!",
+"Bez make up jesteś śliczna!",
 "Po burzy zawsze wychodzi słońce ☀️",
 "Ktoś dziś potrzebuje Twojego uśmiechu."
 ];
-const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-document.getElementById("message").innerText = randomMessage;
+
+function showRandomMessage() {
+    const randomIndex = Math.floor(Math.random() * messages.length);
+    document.getElementById("message").textContent = messages[randomIndex];
+}
+
+showRandomMessage();
 </script>
 
 </body>
