@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dzień Kobiet</title>
+<style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #ffeef5;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+.box {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    font-size: 22px;
+}
+</style>
+</head>
+<body>
+
+<div class="box" id="message"></div>
+
+<script>
+const messages = [
+"Jesteś piękna.",
+"Masz prawo czuć się gorzej.",
+"Twoja wrażliwość to siła.",
+"Popraw koronę i idź dalej 👑",
+"Jesteś wystarczająca.",
+"Świecisz bardziej niż myślisz ✨",
+"Nie musisz być idealna.",
+"Ktoś dziś potrzebuje Twojego uśmiechu."
+];
+
+const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+document.getElementById("message").innerText = randomMessage;
+</script>
+
+</body>
+</html>
